@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #E5E5E5;
+    font-size: 14px;
+}
+
+p {
+    font-size: 14px;
+    color: #000;
+    line-height: 1.8;
+}
+
+.cross {
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    color: #000000;
+    background: white !important;
+    right: 15px;
+    padding: 3px 9px !important;
+    border-radius: 35px;
+    top: 15px;
+}
+
+
+/* Common class */
+
+@media (min-width: 1366px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1366px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1440px;
+    }
+}
+
+.navbar {
+    padding: 0px 1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255 255 255);
+    font-size: 14px;
+}
+
+.eserive-btn {
+    background: #f44336;
+    /* padding: 3px; */
+    border-radius: 4px;
+}
+
+.page-border {
+    box-shadow: 0px 0px 32px 15px rgba(222, 222, 222, 0.25);
+    background: #fff;
+}
+
+
+/* Top Header */
+
+.top-header {
+    padding: 1px 15px;
+    background: #F1F2F4;
+}
+
+.top-header a {
+    font-size: 13px;
+    color: black;
+}
+
+
+/* Font increase */
+
+ul.font-increase {
+    display: flex;
+    margin-bottom: 0px;
+    padding-left: 5px;
+}
+
+ul.font-increase li {
+    margin: 4px;
+    list-style-type: none;
+}
+
+ul.font-increase li a {
+    background: #fff;
+    /* padding: 8px; */
+    border-radius: 3px;
+    color: #069203;
+    font-size: 12px;
+    border: 1px solid #DADADA;
+    font-weight: bold;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.font-increase li a:hover {
+    text-decoration: none;
+}
+
+
+/* Language */
+
+ul.language {
+    display: flex;
+    margin-bottom: 0px;
+    padding-left: 5px;
+}
+
+ul.language li {
+    margin: 4px;
+    list-style-type: none;
+}
+
+ul.language li a {
+    padding: 8px 5px;
+    border-radius: 5px;
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+ul.language li a:hover {
+    text-decoration: none;
+}
+
+
+/* navbar */
+
+.header-bg {
+    background-color: #0D2B93!important;
+}
+
+.minister-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.minister-photo-cm {}
+
+.minister-photo h2 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.minister-photo p {
+    font-size: 13px;
+}
+
+
+/* notification */
+
+.web-notification {}
+
+
+/* Tenders */
+
+.tendersec {
+    background: #F9FDFF;
+    border: 2px solid #488DF5;
+    border-radius: 10px;
+    padding: 13px;
+    height: 350px;
+}
+
+.tendersec h1 {
+    background: #488DF5;
+    margin-top: -40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 22px;
+    padding: 9px;
+    width: 90%;
+    margin: 0px auto;
+    margin-top: -40px;
+}
+
+.tendersec ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.tendersec ul li {
+    list-style-type: none;
+    margin: 1px 15px;
+    padding: 5px 5px;
+}
+
+.tendersec ul li a {
+    color: black;
+    font-size: 13px;
+}
+
+.tendersec ul li a:hover {
+    text-decoration: none;
+}
+
+.tendersec ul li span {
+    background: #C8EEFF;
+    border-radius: 7px;
+    width: 50px;
+    height: 50px;
+}
+
+.tender-list {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.tender-list p {
+    font-size: 9px;
+    background: #C8EEFF;
+    border-radius: 7px;
+    text-align: center;
+    margin-right: 14px;
+    margin-bottom: 0px;
+    padding: 6px;
+    line-height: 14px;
+    width: 46px;
+    font-weight: 700;
+}
+
+.tender-list h5 {
+    font-size: 14px;
+    margin-bottom: 0px;
+    font-weight: 400;
+}
+
+.about-hc h1 {
+    font-size: 30px;
+    border-bottom: 2px solid #488DF5;
+    margin-bottom: 20px;
+}
+
+.about-hc h1>span {
+    color: #488DF5;
+}
+
+footer {
+    background: #4F4C4C;
+    padding: 30px 15px;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer h6,
+footer h1 {
+    color: #fff;
+}
+
+footer .fhead-title {
+    padding: 10PX;
+    color: #fff;
+}
+
+.footer-links .nav-item .nav-link {
+    color: white;
+    font-size: 13px;
+}
