@@ -4,31 +4,25 @@ $(document).ready(function() {
     // $("#pagepopup").modal('show');
 });
 
+
 // Tenders Vertical scroll 
 
 
 $('#demo').marquee({
 
-
     enable: true,
 
-    // scroll direction
-    // 'vertical' or 'horizontal'
     direction: 'vertical',
 
-    // children items
     itemSelecter: 'li',
 
-    // animation delay
     delay: 3000,
 
-    // animation speed
     speed: 1,
 
-    // animation timing
     timing: 1,
 
-    // mouse hover to stop the scroller
+
     mouse: true
 
 });
@@ -47,11 +41,19 @@ function drawChart() {
 
 
     var options = {
-        title: 'Storage Status',
+
         'backgroundColor': {
             'fill': '#FCFCFC',
             'opacity': 100
-        }
+        },
+
+        legend: {
+            alignment: 'center',
+            textStyle: { bold: true, fontSize: 14 }
+        },
+        colors: ['#324BA3', '#069203'],
+
+
     };
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
     chart.draw(data, options);

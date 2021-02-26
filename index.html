@@ -15,6 +15,7 @@
 
 <body>
 
+    <div id="loader"></div>
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
     <header>
         <div class="top-header">
@@ -48,9 +49,8 @@
                             </li>
 
                         </ul>
-                        <form class="form-inline has-search my-2 ml-3 my-lg-0">
-                            <span class="fa fa-search form-control-feedback"></span>
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <form class="form-inline my-2 ml-3 my-lg-0">
+                            <input class="form-control headsearch  mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 
                         </form>
 
@@ -82,13 +82,14 @@
                     About <i class="fa fa-plus" aria-hidden="true"></i>
                   </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Board of Directors</a>
-                                <a class="dropdown-item" href="#">Organisational Structure</a>
+                                <a class="dropdown-item" href="boardDirectors.html">Board of Directors</a>
+                                <a class="dropdown-item" href="boardDirectors.html#organisationstructure">Organisational Structure</a>
                                 <a class="dropdown-item" href="#">Warehousing Act</a>
                                 <a class="dropdown-item" href="#">Regulations</a>
                                 <a class="dropdown-item" href="#">Document Repository</a>
-                                <a class="dropdown-item" href="#">Employee Details</a>
-                                <a class="dropdown-item" href="#">Regional Offices</a>
+                                <a class="dropdown-item" href="photogallery.html">Photo Gallery</a>
+                                <a class="dropdown-item" href="inspectiongallery.html">Inspection Gallery</a>
+
 
                             </div>
                         </li>
@@ -99,7 +100,6 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="#">Types Of Godowns</a>
                                 <a class="dropdown-item" href="#">Logistic</a>
-
                                 <a class="dropdown-item" href="#">Storage and other charges</a>
                                 <a class="dropdown-item" href="#">Service Charter</a>
                             </div>
@@ -107,7 +107,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="tenders.html">Tender</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item">
+                            <a class="nav-link" href="godownlocator.html">Godown Locators</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Reports <i class="fa fa-plus" aria-hidden="true"></i>
                   </a>
@@ -120,7 +123,7 @@
                                 <a class="dropdown-item" href="#">Report 7</a>
 
                             </div>
-                        </li>
+                        </li> -->
 
                         <li class="nav-item">
                             <a class="nav-link" href="contactus.html">Contact Us</a>
@@ -130,6 +133,7 @@
                   e-Services <i class="fa fa-plus" aria-hidden="true"></i>
                   </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Dashboard</a>
                                 <a class="dropdown-item" href="#">Admin Login</a>
 
                             </div>
@@ -160,10 +164,10 @@
                                 <img class="d-block img-fluid w-100" src="assets/images/SLIDER 1.png" alt="slider2">
 
                             </div>
-                            <div class="carousel-item">
+                            <!-- <div class="carousel-item">
                                 <img class="d-block img-fluid" src="assets/images/SLIDER 2.png" alt="slider2">
 
-                            </div>
+                            </div> -->
 
                         </div>
                         <!-- /.carousel-inner -->
@@ -202,10 +206,13 @@
             </div>
 
             <div class="row">
-                <div class="col-sm-12 bg-light py-2">
-                    <marquee>
-                        <p class="mb-0"> APSWC is one of the biggest public warehouses operating in the state of Andhra Pradesh offering logistic services.</p>
-                    </marquee>
+                <div class="col-sm-12 bg-light pl-0">
+                    <div class=" notification">
+                        <h6>Notification</h6>
+                        <marquee onmouseover="this.stop();" onmouseout="this.start();">
+                            <p class="mb-0"> APSWHC with new entity gearing up for next phase of growth with value, trust passion and commitment. Under patronage of state government continue to surge forward to set new standards in storage & preservation activity.</p>
+                        </marquee>
+                    </div>
                 </div>
             </div>
 
@@ -229,7 +236,7 @@
                 <div class="col-sm-4">
                     <div class="tendersec">
 
-                        <h1> <img src="assets/images/tender-icn.svg" alt="tender icon" srcset=""> &nbsp; TENDER</h1>
+                        <h1> <img src="assets/images/tender-icn.svg" alt="tender icon" srcset="" style="width:30px;"> &nbsp; TENDER</h1>
 
                         <ul>
                             <li>
@@ -277,7 +284,7 @@
                 </div>
             </div>
 
-            <div class="row p-5 ">
+            <div class="row px-5 pb-4 ">
                 <div class="col-sm-6 ">
                     <div class="about-hc ">
                         <h1>Our <span>Vision</span></h1>
@@ -290,23 +297,31 @@
 
                     </div>
                 </div>
-                <div class="col-sm-6 ">
+                <div class="col-sm-6">
                     <div class="about-hc ">
                         <h1>Our <span>Objectives </span></h1>
-                        To provide storage facilities to Farmers, Traders and Government agencies to minimize storage losses. <br> To promote and develop scientific storage facilities to minimize wastage. <br> To maintain quality of the commodities through
-                        prophylactic and curative treatment.
+                        <ul class="objectives">
+                            <li>To provide storage facilities to Farmers, Traders and Government agencies to minimize storage losses.</li>
+                            <li>To promote and develop scientific storage facilities to minimize wastage.</li>
+                            <li>To maintain quality of the commodities through prophylactic and curative treatment.</li>
+                        </ul>
+
                     </div>
                 </div>
             </div>
-            <div class="row p-5 " style="background:#FCFCFC ">
+            <div class="row px-5 pt-5" style="background:#FCFCFC ">
 
-                <div class="col-sm-6 ">
+                <div class="col-sm-6">
                     <div class="row d-flex justify-content-center align-items-center ">
                         <div class="col-sm-6 ">
-                            <div class="direct-box green ">
-                                <img src="assets/images/gallery.svg " alt="gallery " srcset=" ">
-                                <p>Photo Gallery</p>
-                            </div>
+                            <a href="photogallery.html">
+
+
+                                <div class="direct-box green ">
+                                    <img src="assets/images/gallery.svg " alt="gallery " srcset=" ">
+                                    <p>Photo Gallery</p>
+                                </div>
+                            </a>
                         </div>
                         <div class="col-sm-6 ">
                             <div class="direct-box blue ">
@@ -329,7 +344,9 @@
                     </div>
                 </div>
                 <div class="col-sm-6 ">
-                    <div id="piechart" style="height: 350px; "></div>
+
+                    <h2 class="text-center text-muted mb-0">Storage Status</h2>
+                    <div id="piechart" style="height: 300px; "></div>
                 </div>
             </div>
             <div class="row ">
@@ -430,14 +447,31 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="assets/js/jquery.marquee.js "></script>
     <script src="assets/js/webscript.js "></script>
 
+
+    <script>
+        // $(document).ready(function() {
+        //     //Preloader
+        //     preloaderFadeOutTime = 500;
+
+        //     function hidePreloader() {
+        //         var preloader = $('.loader');
+        //         preloader.fadeOut(preloaderFadeOutTime);
+        //     }
+        //     hidePreloader();
+        // });
+    </script>
+    <script type="text/javascript">
+        $(window).on("load", function() {
+            $("#loader").fadeOut();
+        });
+    </script>
 </body>
 
 </html>

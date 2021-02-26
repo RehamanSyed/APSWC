@@ -8,11 +8,142 @@
     <title>APSWC</title>
     <link rel="shortcut icon" href="assets/images/favicon.png " type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
-
+    <link rel="stylesheet" href="assets/css/lightgallery.css">
     <link rel="stylesheet" href="assets/css/webstyle.css">
     <link rel="stylesheet" href="assets/css/webresponsive.css">
+
+    <style>
+        .demo-gallery>ul {
+            margin-bottom: 0;
+        }
+        
+        .demo-gallery>ul>li {
+            margin-bottom: 30px;
+        }
+        
+        .demo-gallery>ul>li a {
+            border: 3px solid #FFF;
+            border-radius: 3px;
+            display: block;
+            overflow: hidden;
+            position: relative;
+            float: left;
+        }
+        
+        .demo-gallery>ul>li a>img {
+            -webkit-transition: -webkit-transform 0.15s ease 0s;
+            -moz-transition: -moz-transform 0.15s ease 0s;
+            -o-transition: -o-transform 0.15s ease 0s;
+            transition: transform 0.15s ease 0s;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+            height: 100%;
+            width: 100%;
+        }
+        
+        .demo-gallery>ul>li a:hover>img {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+        
+        .demo-gallery>ul>li a:hover .demo-gallery-poster>img {
+            opacity: 1;
+        }
+        
+        .demo-gallery>ul>li a .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.1);
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            -webkit-transition: background-color 0.15s ease 0s;
+            -o-transition: background-color 0.15s ease 0s;
+            transition: background-color 0.15s ease 0s;
+        }
+        
+        .demo-gallery>ul>li a .demo-gallery-poster>img {
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            -webkit-transition: opacity 0.3s ease 0s;
+            -o-transition: opacity 0.3s ease 0s;
+            transition: opacity 0.3s ease 0s;
+        }
+        
+        .demo-gallery>ul>li a:hover .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .demo-gallery .justified-gallery>a>img {
+            -webkit-transition: -webkit-transform 0.15s ease 0s;
+            -moz-transition: -moz-transform 0.15s ease 0s;
+            -o-transition: -o-transform 0.15s ease 0s;
+            transition: transform 0.15s ease 0s;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+            height: 100%;
+            width: 100%;
+        }
+        
+        .demo-gallery .justified-gallery>a:hover>img {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+        
+        .demo-gallery .justified-gallery>a:hover .demo-gallery-poster>img {
+            opacity: 1;
+        }
+        
+        .demo-gallery .justified-gallery>a .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.1);
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            -webkit-transition: background-color 0.15s ease 0s;
+            -o-transition: background-color 0.15s ease 0s;
+            transition: background-color 0.15s ease 0s;
+        }
+        
+        .demo-gallery .justified-gallery>a .demo-gallery-poster>img {
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            -webkit-transition: opacity 0.3s ease 0s;
+            -o-transition: opacity 0.3s ease 0s;
+            transition: opacity 0.3s ease 0s;
+        }
+        
+        .demo-gallery .justified-gallery>a:hover .demo-gallery-poster {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .demo-gallery .video .demo-gallery-poster img {
+            height: 48px;
+            margin-left: -24px;
+            margin-top: -24px;
+            opacity: 0.8;
+            width: 48px;
+        }
+        
+        .demo-gallery.dark>ul>li a {
+            border: 3px solid #04070a;
+        }
+        
+        .home .demo-gallery {
+            padding-bottom: 80px;
+        }
+    </style>
 </head>
 
 <body>
@@ -151,126 +282,75 @@
                 <div class="col-sm-12">
                     <div class="">
 
-                        <h1>Board Directors</h1>
-                        <p>Home /<a href="#"> Board Director</a></p>
+                        <h1>Photo Gallery</h1>
+                        <p>Home /<a href="#"> Photo Gallery</a></p>
                     </div>
 
                 </div>
             </div>
 
-            <div class="row py-5">
-                <div class="col-sm-4 offset-sm-4">
-                    <div class="bod-box chairman">
-                        <img src="assets/images/chariman.png" alt="chariman-pic" srcset="">
-                        <div>
-                            <h1>Sri Y Madhusudhan Reddy I.F.S</h1>
-                            <p> Special Secretary to Government, Marketing and Cooperation</p>
-                            <h2>Chairman</h2>
-                        </div>
-
-                    </div>
-                    <div class="bod-box vice-chairman">
-
-                        <div>
-                            <h1>Sri S. Srikanth Nath Reddy I.F.S</h1>
-                            <!-- <p> Special Secretary to Government, Marketing and Cooperation</p> -->
-                            <h3>Vice Chairman & Managing Director</h3>
-                        </div>
-                        <img src="assets/images/vicechariman.png" alt="chariman-pic" srcset="">
-
-                    </div>
-                </div>
-                <div class="col-sm-6">
-
-                </div>
-            </div>
+            <div class="row p-5">
 
 
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="container">
-                        <h1 class="level-1 rectangle">Headquarters</h1>
-                        <ol class="level-2-wrapper">
-                            <li>
-                                <h2 class="level-2 rectangle">Director A</h2>
-                                <ol class="level-3-wrapper">
-                                    <li>
-                                        <h3 class="level-3 rectangle">Manager A</h3>
-                                        <ol class="level-4-wrapper">
-                                            <li>
-                                                <h4 class="level-4 rectangle">Person A</h4>
-                                            </li>
 
-                                        </ol>
-                                    </li>
+                <div class="col-sm-10 offset-sm-1">
 
-                                </ol>
+                    <p class="text-center">
+                        A paragraph talking about the photography work made for this project. Incididunt ut labore et dolore magna aliqua. Ut enim ad minm veniam, quis nostrud exercitation ullmaco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+
+                    <div class="demo-gallery">
+                        <ul id="lightgallery" class="list-unstyled row">
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-src="assets/images/gallery/Rectangle 91.png">
+                                <a href="">
+                                    <img class="img-responsive" src="assets/images/gallery/Rectangle 91.png" alt="Thumb-1">
+                                </a>
                             </li>
-                            <li>
-                                <h2 class="level-2 rectangle">Director B</h2>
-                                <ol class="level-3-wrapper">
-                                    <li>
-                                        <h3 class="level-3 rectangle">Manager C</h3>
-                                        <ol class="level-4-wrapper">
-                                            <li>
-                                                <h4 class="level-4 rectangle">Person A</h4>
-                                            </li>
-
-                                        </ol>
-                                    </li>
-
-                                </ol>
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-src="assets/images/gallery/Rectangle 92.png">
+                                <a href="">
+                                    <img class="img-responsive" src="assets/images/gallery/Rectangle 92.png" alt="Thumb-2">
+                                </a>
                             </li>
-                            <li>
-                                <h2 class="level-2 rectangle">Director c</h2>
-                                <ol class="level-3-wrapper">
-                                    <li>
-                                        <h3 class="level-3 rectangle">Manager C</h3>
-                                        <ol class="level-4-wrapper">
-                                            <li>
-                                                <h4 class="level-4 rectangle">Person A</h4>
-                                            </li>
-
-                                        </ol>
-                                    </li>
-
-                                </ol>
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-src="assets/images/gallery/Rectangle 93.png">
+                                <a href="">
+                                    <img class="img-responsive" src="assets/images/gallery/Rectangle 93.png" alt="Thumb-3">
+                                </a>
                             </li>
-                            <li>
-                                <h2 class="level-2 rectangle">Director B</h2>
-                                <ol class="level-3-wrapper">
-                                    <li>
-                                        <h3 class="level-3 rectangle">Manager C</h3>
-                                        <ol class="level-4-wrapper">
-                                            <li>
-                                                <h4 class="level-4 rectangle">Person A</h4>
-                                            </li>
 
-                                        </ol>
-                                    </li>
 
-                                </ol>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-src="assets/images/gallery/Rectangle 94.png">
+                                <a href="">
+                                    <img class="img-responsive" src="assets/images/gallery/Rectangle 94.png" alt="Thumb-4">
+                                </a>
                             </li>
-                            <li>
-                                <h2 class="level-2 rectangle">Director B</h2>
-                                <ol class="level-3-wrapper">
-                                    <li>
-                                        <h3 class="level-3 rectangle">Manager C</h3>
-                                        <ol class="level-4-wrapper">
-                                            <li>
-                                                <h4 class="level-4 rectangle">Person A</h4>
-                                            </li>
 
-
-                                        </ol>
-                                    </li>
-
-                                </ol>
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-src="assets/images/gallery/Rectangle 91.png">
+                                <a href="">
+                                    <img class="img-responsive" src="assets/images/gallery/Rectangle 91.png" alt="Thumb-1">
+                                </a>
                             </li>
-                        </ol>
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-src="assets/images/gallery/Rectangle 93.png">
+                                <a href="">
+                                    <img class="img-responsive" src="assets/images/gallery/Rectangle 93.png" alt="Thumb-3">
+                                </a>
+                            </li>
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-src="assets/images/gallery/Rectangle 92.png">
+                                <a href="">
+                                    <img class="img-responsive" src="assets/images/gallery/Rectangle 92.png" alt="Thumb-2">
+                                </a>
+                            </li>
+
+                            <li class="col-xs-6 col-sm-4 col-md-3" data-src="assets/images/gallery/Rectangle 94.png">
+                                <a href="">
+                                    <img class="img-responsive" src="assets/images/gallery/Rectangle 94.png" alt="Thumb-4">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+
         </div>
     </main>
 
@@ -284,7 +364,7 @@
             <div class="row">
                 <!--Grid column-->
                 <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h1 class="text-uppercase"> APSWHC</h1>
+                    <h1 class="text-uppercase"> APSWC</h1>
                     <h4 class="fhead-title ">Head Office</h4>
                     <p>
                         Stalin Corporate Building. Back Side of Auto Nagar, 2nd floor, <br> D.no. 55-17-3, C-13, Industrial Estate, Auto Nagar, Vijayawada -520 007
@@ -301,9 +381,17 @@
                             <a class="nav-link " href="# ">Website Policy</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " href="# ">SiteMap</a>
+                            <a class="nav-link " href="# ">Disclaimer</a>
                         </li>
-
+                        <li class="nav-item ">
+                            <a class="nav-link " href="privacypolicy.html">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="# ">Hyperlinking Policy</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="# ">Accessibility</a>
+                        </li>
                     </ul>
 
 
@@ -322,13 +410,12 @@
         <!-- Grid container -->
 
         <!-- Copyright -->
-        <div class="r text-white py-2" style="background-color: #222121;">
+        <div class="r text-white p-3" style="background-color: #222121;">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <p class="mb-0 font-sm-size">Copyright © 2021 APSWC. All Rights Reserved. </p>
-                    </div>
-
+                    <div class="col-sm-6"> Copyright © 2021 APSWC. All Rights Reserved. |
+                        <a class="text-white" href="site.html">Site Map</a></div>
+                    <div class="col-sm-6"></div>
                 </div>
 
             </div>
@@ -346,13 +433,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
     <script src=" https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
     <script src="assets/js/jquery.marquee.js "></script>
     <script src="assets/js/webscript.js "></script>
+
+
+
+
+
+
+
 
     <script>
         $(document).ready(function() {
             $('#example').DataTable();
         });
+    </script>
+    <script>
+        lightGallery(document.getElementById('lightgallery'));
     </script>
 </body>
 
