@@ -446,21 +446,22 @@ ul.language li a:hover {
     background: #F9FDFF;
     border: 2px solid #488DF5;
     border-radius: 10px;
-    padding: 13px;
+    padding: 15px 15px;
     height: 350px;
 }
 
 .tendersec h1 {
     background: #488DF5;
     margin-top: -40px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 6px;
+    /* margin-bottom: 2px; */
     color: white;
     font-size: 22px;
-    padding: 9px;
-    width: 90%;
+    padding: 4px 10px;
+    width: 80%;
     margin: 0px auto;
-    margin-top: -40px;
+    margin-top: -50px;
+    position: absolute;
 }
 
 .tendersec ul {
@@ -470,8 +471,8 @@ ul.language li a:hover {
 
 .tendersec ul li {
     list-style-type: none;
-    margin: 9px 15px;
-    padding: 5px 5px;
+    /* margin: 4px 6px; */
+    padding: 12px 10px;
 }
 
 .tendersec ul li::after {
@@ -480,7 +481,7 @@ ul.language li a:hover {
     width: 74%;
     background: #dadada4f;
     height: 1.5px;
-    margin-top: 7px;
+    margin-top: 12px;
 }
 
 .tendersec ul li a {
@@ -507,19 +508,23 @@ ul.language li a:hover {
 
 .tender-list p {
     font-size: 9px;
-    background: #C8EEFF;
-    border-radius: 7px;
+    background: #e0f7fa;
+    border-radius: 4px;
     text-align: center;
     margin-right: 14px;
     margin-bottom: 0px;
     padding: 6px;
-    line-height: 14px;
-    width: 46px;
+    line-height: 12px;
+    width: 50px;
     font-weight: 700;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .tender-list h5 {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 0px;
     font-weight: 400;
 }
@@ -547,7 +552,7 @@ footer p {
     color: #fff;
     font-weight: 300;
     letter-spacing: 0.5px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 footer h6,
@@ -557,8 +562,10 @@ footer h1 {
 }
 
 footer .fhead-title {
-    padding: 10PX;
+    padding: 10px;
     color: #fff;
+    padding-left: 0px;
+    margin-bottom: -3px;
 }
 
 .footer-links .nav-item .nav-link {
