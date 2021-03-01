@@ -4,7 +4,7 @@ $(window).on("load", function() {
 });
 
 // Font increase or Decerase
-var $affectedElements = $("p, h1, a"); // Can be extended, ex. $("div, p, span.someClass")
+var $affectedElements = $("p, h1, a, li"); // Can be extended, ex. $("div, p, span.someClass")
 
 $affectedElements.each(function() {
     var $this = $(this);
@@ -29,3 +29,17 @@ function changeFontSize(direction) {
         $this.css("font-size", parseInt($this.css("font-size")) + direction);
     });
 }
+
+
+ // header sticky
+
+ window.onscroll = function() {myFunction()};
+ var header = document.getElementById("myHeader");
+ var sticky = header.offsetTop; 
+ function myFunction() {
+   if (window.pageYOffset > sticky) {
+     header.classList.add("sticky");
+   } else {
+     header.classList.remove("sticky");
+   }
+ }
